@@ -13,7 +13,5 @@ def directory_structure(folder_path, tab=0):
             elif item.is_file():
                 print (f"{' '*tab} {Fore.GREEN} {item.name} {Fore.RESET}")
     
-           
-  
-    
+         
 directory_structure("./goit-algo-hw-04/my_directory")
