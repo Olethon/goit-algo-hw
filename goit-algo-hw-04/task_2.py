@@ -11,7 +11,7 @@ def get_cats_info(path: str):
     except Exception:
         print("The file is in the wrong format or is empty.")
         return None
-    print(outlist)
+    print(f"[{"\n".join(map(str, outlist))}]")
 
 path_to_file = './goit-algo-hw-04/cats_info.txt'     
 get_cats_info(path_to_file)
