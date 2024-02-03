@@ -28,7 +28,7 @@ def get_numbers_ticket(min: int, max: int, quantity: int):
         unique_numbers = random.sample(range(min, max + 1), quantity)
         return(sorted(unique_numbers))
 
-# print(get_numbers_ticket(1, 49, 6))
+print(get_numbers_ticket(1, 49, 6))
 
 
 
