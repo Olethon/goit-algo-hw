@@ -7,7 +7,7 @@ list_of_dicts = [
     {'колір': 'рожевий', 'форма': 'кругла'},
     {'колір': 'синій', 'форма': 'кругла'}
 ]
-count_key = 'колір' 
-count_dict = Counter( for item in list_of_dicts)
 
-print(count_dict)
+for log in list_of_dicts: 
+    if log.get("колір") == 'червоний' :
+        print (f"Деталі логів для рівня '{'червоний'}'\n{log['колір']} {log['форма']} - {log['колір']}")       
