@@ -31,7 +31,6 @@ def count_logs_by_level(logs: list) -> dict: # проходить по всім 
     count_dict = dict(Counter(item[count_dict_key] for item in logs))
     return count_dict
 
-
 def display_log_counts(counts_dict: dict): # форматує та виводить результати підрахунку в читабельній формі.
     print(f"{"Рівень логування".ljust(17)}| {"Кількість".rjust(9)}\n{"-"*30}") 
     for level, count in counts_dict.items():

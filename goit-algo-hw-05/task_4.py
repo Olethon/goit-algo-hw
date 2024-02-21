@@ -10,8 +10,15 @@ def input_error(func):    # Декоратор для функцій
         except KeyError:
             return "Contact not found"
         except ValueError:
+            return "The data is not entered correctly"
+        except ValueError:
             return "The data is not entered correctly"          
     return inner
+
+@input_error
+def show_phone(args, contacts):
+    name = args[0]
+    return contacts[name] if name in contacts.keys() else "Not found"
 
 @input_error                                           
 def add_contact(args: str, contacts: dict): # Функія додавання контактів
@@ -54,6 +61,8 @@ def main():  # основна функція виклику
                 print(add_contact(args, contacts))
             case "change":
                 print(change_contact(args, contacts))
+            case "show":
+                print(show_phone(args, contacts))
             case "del":
                 print(del_contact(args, contacts))
             case _:

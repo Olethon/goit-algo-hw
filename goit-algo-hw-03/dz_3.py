@@ -28,23 +28,23 @@ def get_numbers_ticket(min: int, max: int, quantity: int):
         unique_numbers = random.sample(range(min, max + 1), quantity)
         return(sorted(unique_numbers))
 
-print(get_numbers_ticket(1, 49, 6))
+# print(get_numbers_ticket(1, 49, 6))
 
 
 
 #  Task_3
 
-# raw_numbers = [
-#     "067\\t123 4567",
-#     "(095) 234-5678\\n",
-#     "+380 44 123 4567",
-#     "380501234567",
-#     "    +38(050)123-32-34",
-#     "     0503451234",
-#     "(050)8889900",
-#     "38050-111-22-22",
-#     "38050 111 22 11   ",
-# ]
+raw_numbers = [
+    "067\\t123 4567",
+    "(095) 234-5678\\n",
+    "+380 44 123 4567",
+    "380501234567",
+    "    +38(050)123-32-34",
+    "     0503451234",
+    "(050)8889900",
+    "38050-111-22-22",
+    "38050 111 22 11   ",
+]
 
 def normalize_phone(phone_number):
     p1=r"[\d\+]+"
@@ -58,8 +58,8 @@ def normalize_phone(phone_number):
     else:
         return '+38' + phone_number
 
-# for phone in raw_numbers:
-#     print(normalize_phone(phone))   
+for phone in raw_numbers:
+    print(normalize_phone(phone))   
 
 
 

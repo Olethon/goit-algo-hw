@@ -3,6 +3,10 @@ def parse_input(user_input):
     cmd = cmd.strip().lower()
     return cmd, *args
 
+def show_phone(args, contacts):
+    name = args[0]
+    return contacts[name] if name in contacts.keys() else "Not found"
+
 def add_contact(args, contacts):
     name, phone = args
     if contacts == {}:
@@ -53,6 +57,8 @@ def main():
             print(change_contact(args, contacts))
         elif command == "del" and args:
             print(del_contact(args, contacts))
+        elif command == "show":
+            print(show_phone(args, contacts))
         else:
             print("Invalid command.")
 
