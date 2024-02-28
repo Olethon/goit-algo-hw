@@ -9,8 +9,7 @@ def load_data(filename="addressbook.pkl"):
     except FileNotFoundError:
         return AddressBook()  # Повернення нової адресної книги, якщо файл не знайдено
 
-# Збереження контактів у файл у випадку зміни
-def save_data(book, filename="addressbook.pkl"):
+def save_data(book, filename="addressbook.pkl"):  # Збереження контактів у файл у випадку зміни
     with open(filename, "wb") as f:
         pickle.dump(book, f)
     return "data changed successfully"
