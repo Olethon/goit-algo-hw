@@ -11,7 +11,7 @@ def main():
             user_change = user_change.lower()
             if user_change == "y":
                 print (save_data(book))
-            print('goodbay:)')
+            print('goodbye:)')
             break
         elif command == "hello":
             print("How can I help you?")
